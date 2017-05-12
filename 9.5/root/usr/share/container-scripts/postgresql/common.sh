@@ -199,9 +199,9 @@ function set_pgdata ()
     popd
   else 
     # create a subdirectory that the user owns
-    mkdir -p "${HOME}/data/userdata"
+    mkdir -p "${HOME}/data/pgdata/userdata"
   fi
-  export PGDATA=$HOME/data/userdata
+  export PGDATA=$HOME/data/pgdata/userdata
   # ensure sane perms for postgresql startup
   chmod 700 "$PGDATA"
 }
